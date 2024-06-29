@@ -7,7 +7,7 @@ A minimal `.zshrc` theme written to avoid heavy stuff like ohmyzsh. It is lightw
 3. **Key Bindings:** Pre-configured for convenience
 4. Fully commented for easy customization
 
-To display properly, it needs the [Meslo font](./bin/meslo.tar.gz).
+To display properly, it needs the [Meslo font](./bin/meslo.tar.gz). Install it and set your terminal to use it.
 
 ## Prompt
 
