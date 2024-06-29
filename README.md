@@ -1,16 +1,15 @@
 # zshrc minimal theme
 
-A minimal .zshrc theme I created to avoid heavy plugins. Aside from the stock zsh plugins, it is self contained offering:
+A minimal `.zshrc` theme written to avoid heavy stuff like ohmyzsh. It is lightweight and self-contained, with the basic stuff for a fresh install and:
 
-1. Basic options for a fresh install
-2. Custom prompt for current user and different prompt for root user
-3. Auto completion, syntax highlighting, autosuggestions sourced and set (need to install the plugins)
-4. Key bindings
+1. **Prompt**: Displays a different prompt for the current user and the root user
+2. **Auto Completion, Syntax Highlighting, Autosuggestions:** Sourced but require installation of the respective plugins
+3. **Key Bindings:** Pre-configured for convenience
 
 Fully commented for easy customization, it needs the Meslo font to display the icons properly:
 
 ![How it looks like](./bin/zshrc.png)
 
-As it is not easy to find the "right" icon, I added some as comments at the end of the file, so you can just copy and replace/add in your own custom prompt.
+Finding the "right" icon can be challenging. To help with this, some icon options have been added as comments at the end of the file. You can easily copy and replace/add them to your custom prompt.
 
 ![Icons](./bin/icons.png)
