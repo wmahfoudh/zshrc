@@ -50,6 +50,7 @@ export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export SHELL=/usr/bin/zsh
 export PATH="/home/$USER/bin:$PATH"
+export CHROME_EXECUTABLE="/usr/bin/google-chrome-stable"
 
 ## Color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m'
