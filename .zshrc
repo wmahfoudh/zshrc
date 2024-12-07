@@ -37,9 +37,13 @@ zmodload zsh/terminfo              # Load module for terminal capability informa
 # Prompt
 # Primary prompt
 NEWLINE=$'\n'
-PROMPT='%(!.%F{red}%f%K{red}%F{white} 🌶 %n %k%F{red}%f%F{blue}%f%K{blue}%F{white} 🖿 %9/ %k%F{blue}%f${NEWLINE}󱞩 .%F{magenta}%f%K{magenta}%F{white} 🕵 %n %k%F{magenta}%f%F{blue}%f%K{blue}%F{white} 🖿 %9/ %k%F{blue}%f${NEWLINE}󱞩 )'
+# PROMPT='%(!.%F{red}%f%K{red}%F{white} 🌶 %n %k%F{red}%f%F{blue}%f%K{blue}%F{white} 🖿 %9/ %k%F{blue}%f${NEWLINE}󱞩 .%F{magenta}%f%K{magenta}%F{white} 🕵 %n %k%F{magenta}%f%F{blue}%f%K{blue}%F{white} 🖿 %9/ %k%F{blue}%f${NEWLINE}󱞩 )'
 # Right-side prompt
-RPROMPT='%F{cyan}%f%K{cyan}%F{black}⏲ %T%   󰂎 $(acpi | grep -o "[0-9]*%")%%f%k%F{cyan}%f'
+# RPROMPT='%F{cyan}%f%K{cyan}%F{black}⏲ %T%   󰂎 $(acpi | grep -o "[0-9]*%")%%f%k%F{cyan}%f'
+
+PROMPT='%(!.%F{red}🮈%f%K{red}%F{white} ☠️ %n %k%F{red}%f%F{blue}🮈%f%K{blue}%F{white} 📂 %9/ %k%F{blue}%f${NEWLINE}%F{blue}󱞩%f .%F{magenta}🮈%f%K{magenta}%F{white} 👻 %n %k%F{magenta}%f%F{blue}🮈%f%K{blue}%F{white} 📂 %9/ %k%F{blue}%f${NEWLINE}%F{blue}󱞩%f )'
+# Right-side prompt
+RPROMPT='%F{cyan}%f%F{cyan}⏰ %T ▫️ ⚡ $(acpi | grep -o "[0-9]*%")% %F{cyan}%f'
 
 # Export Section
 
