@@ -37,13 +37,9 @@ zmodload zsh/terminfo              # Load module for terminal capability informa
 # Prompt
 # Primary prompt
 NEWLINE=$'\n'
-# PROMPT='%(!.%F{red}%f%K{red}%F{white} 🌶 %n %k%F{red}%f%F{blue}%f%K{blue}%F{white} 🖿 %9/ %k%F{blue}%f${NEWLINE}󱞩 .%F{magenta}%f%K{magenta}%F{white} 🕵 %n %k%F{magenta}%f%F{blue}%f%K{blue}%F{white} 🖿 %9/ %k%F{blue}%f${NEWLINE}󱞩 )'
-# Right-side prompt
-# RPROMPT='%F{cyan}%f%K{cyan}%F{black}⏲ %T%   󰂎 $(acpi | grep -o "[0-9]*%")%%f%k%F{cyan}%f'
-
 PROMPT='%(!.%F{red}🮈%f%K{red}%F{white} ☠️ %n %k%F{red}%f%F{blue}🮈%f%K{blue}%F{white} 📂 %9/ %k%F{blue}%f${NEWLINE}%F{blue}󱞩%f .%F{magenta}🮈%f%K{magenta}%F{white} 👻 %n %k%F{magenta}%f%F{blue}🮈%f%K{blue}%F{white} 📂 %9/ %k%F{blue}%f${NEWLINE}%F{blue}󱞩%f )'
 # Right-side prompt
-RPROMPT='%F{cyan}%f%F{cyan}⏰ %T ▫️ ⚡ $(acpi | grep -o "[0-9]*%")% %F{cyan}%f'
+RPROMPT='%F{cyan}%f%F{cyan}👀 %T ▫️ ⚡ $(acpi | grep -o "[0-9]*%" | grep -v "^0%$" | head -n 1)% %F{cyan}%f'
 
 # Export Section
 
@@ -72,7 +68,8 @@ alias df='df -h'                        # Human-readable sizes
 alias free='free -m'                    # Show sizes in MB
 alias ls='ls -Alh --color=auto --group-directories-first'
 alias cmatrix='cmatrix -b -a -s'
-alias reflect='sudo reflector --verbose --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+#alias reflect='sudo reflector --verbose --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
+alias reflect='sudo reflector --verbose --age 24 --download-timeout 1 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist'
 
 # Plugins Sourcing and Setup
 
