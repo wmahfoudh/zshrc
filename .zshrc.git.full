@@ -52,25 +52,28 @@ function add_git_status_info() {
 
     # Check for unstaged modifications:
     if ! git diff --quiet --ignore-submodules 2>/dev/null; then
-      git_status="${git_status}✗"
+      git_status="${git_status}(🔥)"
     fi
 
     # Check for staged changes:
     if ! git diff --cached --quiet --ignore-submodules 2>/dev/null; then
-      git_status="${git_status}+"
+      git_status="${git_status}(📦)"
     fi
 
     # Check for untracked files:
     if [[ -n "$(git ls-files --others --exclude-standard 2>/dev/null)" ]]; then
-      git_status="${git_status}?"
+      git_status="${git_status}(✨)"
     fi
 
-    # Append the status symbols to the branch info if any are found:
-    if [[ -n "$git_status" ]]; then
-      vcs_info_msg_0_="${vcs_info_msg_0_}${git_status}"
+    # If no changes are detected, show the up-to-date emoji:
+    if [[ -z "$git_status" ]]; then
+      git_status="(✅)"
     fi
+
+    vcs_info_msg_0_="${vcs_info_msg_0_}${git_status}"
   fi
 }
+
 
 # Ensure prompt substitution is enabled
 setopt prompt_subst
@@ -84,6 +87,7 @@ add-zsh-hook precmd add_git_status_info
 NEWLINE=$'\n'
 PROMPT="%{$fg[cyan]%} 👤%n@%m %{$fg[magenta]%} %{$fg[yellow]%}📁 %~ %{$fg[magenta]%} %{$fg[green]%} \${vcs_info_msg_0_}%{$reset_color%}%f${NEWLINE}%F{blue} 󱞩%f "
 RPROMPT='%F{cyan}%f%F{cyan}%T ▫️ $(acpi | grep -o "[0-9]*%" | grep -v "^0%$" | head -n 1)% %F{cyan}%f'
+
 
 # Export Section
 
