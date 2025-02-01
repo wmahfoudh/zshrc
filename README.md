@@ -1,6 +1,6 @@
 # zshrc themes
 
-Three versions of `.zshrc` light and self-contained theme that do not need heavy stuff like *ohmyzsh*, with the basic stuff for a fresh install.
+Three versions of `.zshrc` light and self-contained theme that do not need heavy plugins like *ohmyzsh* or *powerlevel10k*, with the basic stuff for a fresh install.
 - *Auto Completion, Syntax Highlighting* and *Autosuggestions* plugins are sourced but require installation, so either install them or remove the line if not needed.
 - Pre-configured common **Key Bindings**
 - Time and battery info shown in the right prompt
