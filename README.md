@@ -17,6 +17,6 @@ More elaborate version that displays the git branch and status
 
 ## Misc
 1. **Auto Completion, Syntax Highlighting, Autosuggestions:** Sourced but require installation of the respective plugins
-2. **Key Bindings:** Pre-configured for convenience
+2. Pre-configured common **Key Bindings**
 3. Fully commented for easy customization
 4. Time and battery info in the right prompt
