@@ -1,18 +1,17 @@
-# zshrc minimal theme
+# zshrc themes
 
-A minimal `.zshrc` theme written to avoid heavy stuff like ohmyzsh. It is lightweight and self-contained, with the basic stuff for a fresh install and:
+Three versions of `.zshrc` light and self-contained theme that do not need heavy stuff like ohmyzsh. They have the basic stuff for a fresh install:
 
-1. **Prompt**: Displays a different prompt for the current user and the root user
-2. **Auto Completion, Syntax Highlighting, Autosuggestions:** Sourced but require installation of the respective plugins
-3. **Key Bindings:** Pre-configured for convenience
-4. Fully commented for easy customization
-
-## Prompt
+1. **zshrc.basic**: Colorful with different prompt for the current user and the root user
 
 ![How it looks like](./bin/zshrc.png)
+2. **zshrc.git.basic:** A lighter version that displays the git branch
+3. **zshrc.git.full:** More elaborate version that displays the git branch and status
 
-## Icons
+![How it looks like](./bin/git.png)
 
-Finding the "right" icon can be challenging. To help with this, some icon options have been added as comments at the end of the file. You can easily copy and replace/add them to your custom prompt.
-
-![Icons](./bin/icons.png)
+## Misc
+1. **Auto Completion, Syntax Highlighting, Autosuggestions:** Sourced but require installation of the respective plugins
+2. **Key Bindings:** Pre-configured for convenience
+3. Fully commented for easy customization
+4. Time and battery infor in the right prompt
