@@ -1,6 +1,6 @@
 # zshrc themes
 
-Three versions of `.zshrc` light and self-contained theme that do not need heavy stuff like *ohmyzsh*, with the basic stuff for a fresh install. **Auto Completion, Syntax Highlighting, Autosuggestions:** plugins are sourced but require installation, so either install them or remove the line if not needed.
+Three versions of `.zshrc` light and self-contained theme that do not need heavy stuff like *ohmyzsh*, with the basic stuff for a fresh install. *Auto Completion, Syntax Highlighting, Autosuggestions* plugins are sourced but require installation, so either install them or remove the line if not needed.
 
 ## zshrc.basic: 
 Colorful with different prompts for the current user and the root user
