@@ -12,7 +12,7 @@ Colorful with different prompts for the current user and the root user
 ![How it looks like](./bin/zshrc.png)
 
 ## zshrc.git.full:
-More elaborate version that displays the git branch and status
+Git focused version that displays the git branch and status
 
 ![How it looks like](./bin/git.png)
 
