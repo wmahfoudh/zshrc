@@ -49,6 +49,7 @@ zstyle ':vcs_info:*' actionformats '(%b|%a)'
 function add_git_status_info() {
   if [[ -n "$vcs_info_msg_0_" ]]; then
     local git_status=""
+    local git_icon=" "
 
     # Check for unstaged modifications:
     if ! git diff --quiet --ignore-submodules 2>/dev/null; then
@@ -62,7 +63,7 @@ function add_git_status_info() {
 
     # Check for untracked files:
     if [[ -n "$(git ls-files --others --exclude-standard 2>/dev/null)" ]]; then
-      git_status="${git_status}(✨)"
+      git_status="${git_status}(❓)"
     fi
 
     # If no changes are detected, show the up-to-date emoji:
@@ -70,10 +71,9 @@ function add_git_status_info() {
       git_status="(✅)"
     fi
 
-    vcs_info_msg_0_="${vcs_info_msg_0_}${git_status}"
+    vcs_info_msg_0_="${git_icon}${vcs_info_msg_0_}${git_status}"
   fi
 }
-
 
 # Ensure prompt substitution is enabled
 setopt prompt_subst
@@ -85,7 +85,7 @@ add-zsh-hook precmd add_git_status_info
 
 # --- Prompt Setup ---
 NEWLINE=$'\n'
-PROMPT="%{$fg[cyan]%} 👤%n@%m %{$fg[magenta]%} %{$fg[yellow]%}📁 %~ %{$fg[magenta]%} %{$fg[green]%} \${vcs_info_msg_0_}%{$reset_color%}%f${NEWLINE}%F{blue} 󱞩%f "
+PROMPT="%{$fg[cyan]%} 👤%n@%m %{$fg[magenta]%} %{$fg[yellow]%}📁 %~ %{$fg[magenta]%} %{$fg[green]%}\${vcs_info_msg_0_}%{$reset_color%}%f${NEWLINE}%F{yellow} 󱞩%f "
 RPROMPT='%F{cyan}%f%F{cyan}%T ▫️ $(acpi | grep -o "[0-9]*%" | grep -v "^0%$" | head -n 1)% %F{cyan}%f'
 
 
@@ -123,8 +123,6 @@ alias df='df -h'                        # Human-readable sizes
 alias free='free -m'                    # Show sizes in MB
 alias ls='ls -Alh --color=auto --group-directories-first'
 alias cmatrix='cmatrix -b -a -s'
-#alias reflect='sudo reflector --verbose --latest 200 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
-#alias reflect='sudo reflector --verbose --age 24 --download-timeout 1 --protocol http,https --sort rate --save /etc/pacman.d/mirrorlist'
 alias reflect='sudo reflector --latest 20 --sort rate --download-timeout 3 --save /etc/pacman.d/mirrorlist'
 alias pd='pandoc -V geometry:margin=2cm --pdf-engine=wkhtmltopdf'
 
@@ -188,8 +186,6 @@ bindkey '^[[B' history-substring-search-down  # Down arrow key for history subst
 bindkey '^H' backward-kill-word               # Ctrl+Backspace to delete previous word
 bindkey '^[[Z' undo                           # Shift+Tab to undo last action
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/itachi/.cache/lm-studio/bin"
 
 # Fabric Framework related
 alias paste='wl-paste'
