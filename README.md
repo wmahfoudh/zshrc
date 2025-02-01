@@ -2,11 +2,13 @@
 
 Three versions of `.zshrc` light and self-contained theme that do not need heavy stuff like ohmyzsh. They have the basic stuff for a fresh install:
 
-1. **zshrc.basic**: Colorful with different prompt for the current user and the root user
+## zshrc.basic: Colorful with different prompt for the current user and the root user
 
 ![How it looks like](./bin/zshrc.png)
-2. **zshrc.git.basic:** A lighter version that displays the git branch
-3. **zshrc.git.full:** More elaborate version that displays the git branch and status
+
+## zshrc.git.basic: A lighter version that displays the git branch
+
+## zshrc.git.full: More elaborate version that displays the git branch and status
 
 ![How it looks like](./bin/git.png)
 
